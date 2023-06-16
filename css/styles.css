@@ -2,7 +2,6 @@
 	--primary-color: #367a70;
 	--secondary-color: #e0b354;
 	--dark-grey: #2b2b2b;
-	--light-grey: #d3d3d3;
 	--cream: #e9dede;
 	--violet: #ee82ee;
 	--light-sky-blue: #87cefa;
@@ -34,7 +33,7 @@
   }
   
   a {
-	color: var(--light-grey);
+	color: var(--black);
   }
   
   a:hover {
@@ -55,15 +54,14 @@
   .button {
 	@extend %button-shared;
 	background-color: var(--primary-color);
-  
 	button.hover,
 	button:focus {
-	  cursor: pointer;
-	  opacity: 0.8;
-  
-	  .button__secondary {
-		background-color:var(--secondary-color);
-		color: var(--dark-grey);
+	cursor: pointer;
+	opacity: 0.8;
+
+	.button__secondary {
+	 background-color: var(--secondary-color);
+	 color: var(--dark-grey);
 	  }
 	}
   
@@ -71,7 +69,7 @@
 	  border: none;
 	  font-family: inherit;
 	  background-color: var(--primary-color);
-	  color:var(cream);
+	  color: var(--cream);
 	  text-decoration: none;
 	  padding: 10px;
 	  border-radius: 3px;

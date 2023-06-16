@@ -1,4 +1,3 @@
-style.production.css
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
@@ -10,8 +9,11 @@ style.production.css
 	--primary-color: #367a70;
 	--secondary-color: #e0b354;
 	--dark-grey: #2b2b2b;
+	--cream: #e9dede;
 	--violet: #ee82ee;
 	--light-sky-blue: #87cefa;
+	--black: #000000;	
+	--flex-background: #0080ff; 
   }
   
   body {
@@ -38,7 +40,7 @@ style.production.css
   }
   
   a {
-	color: gray;
+	color: var(--black);
   }
   
   a:hover {
@@ -49,16 +51,16 @@ style.production.css
   }
   
   a:visited {
-	color: violet;
+	color: var(--violet);
   }
   
   :active {
-	color: lightskyblue;
+	color: var(--light-sky-blue);
   }
   
   .button {
 	@extend %button-shared;
-	background-color: #367a70;
+	background-color: var(--primary-color);
   
 	button.hover,
 	button:focus {
@@ -66,20 +68,20 @@ style.production.css
 	  opacity: 0.8;
   
 	  .button__secondary {
-		background-color: #e0b354;
-		color: #2b2b2b;
+		background-color:var(--secondary-color);
+		color: var(--dark-grey);
 	  }
 	}
   
 	.button-shared {
 	  border: none;
 	  font-family: inherit;
-	  background-color: #357b70;
-	  color: white;
+	  background-color: var(--primary-color);
+	  color:var(cream);
 	  text-decoration: none;
 	  padding: 10px;
 	  border-radius: 3px;
-	  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+	  border-bottom: 2px solid var(--black);
 	}
   }
   
@@ -117,37 +119,35 @@ style.production.css
 	    -ms-flex: 1 1 100px;
 	        flex: 1 1 100px;
   }
-  
-  .page-header {
+ 
+.page-header {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
-	padding: 20px;
-  }
-  
-  .page-header__item {
-	-webkit-box-flex: 0;
-	-ms-flex: 0 1 200px;
-	flex: 0 1 200px;
-  }
-  .page-header__item:last-child {
+padding: 20px;
+}
+
+.page-header__item {
+-webkit-box-flex: 0;
+-ms-flex: 0 1 200px;
+flex: 0 1 200px;
+}
+.page-header__item:last-child {
 	-webkit-box-flex: 1;
 	    -ms-flex-positive: 1;
 	        flex-grow: 1;
 	text-align: right;
   }
-  
-  .navigation-list {
+.navigation-list {
 	list-style-type: none;
-  }
-  
-  .navigation-list li {
+  }  
+.navigation-list li {
 	display: inline-block;
 	margin-left: 15px;
   }
   
-  .navigation-list li .navigation-list__item--active {
+.navigation-list li .navigation-list__item--active {
 	text-decoration: none;
   }
   
@@ -155,15 +155,15 @@ style.production.css
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	background-color: rgba(227, 117, 214, 0.5);
+	background-color: var(--flex-background);
   }
   
   .flex-item {
-	background-color: rgb(6, 166, 172);
+	background-color: var(--flex-background);
 	height: 75px;
 	margin: 10px;
 	text-align: center;
-	color: rgb(246, 246, 246);
+	color: var(--cream);
 	line-height: 75px;
 	-ms-flex-preferred-size: 200px;
 	flex-basis: 200px;
