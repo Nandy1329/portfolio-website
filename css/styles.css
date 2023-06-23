@@ -52,8 +52,7 @@ a:visited {
 }
 
 .button {
-  @extend %button-shared;
-
+  rotate: button-shared;
   background-color: var(--primary-color);
 
   button.hover,
